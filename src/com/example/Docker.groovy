@@ -11,7 +11,7 @@ class Docker implements Serializable {
 
     def buildDockerImage(String imageName) {
         script.echo "building the docker image ... in jenkins-shared-library/src/conm/example/Docker.groovy"
-        script.sh "docker build -t $imageName ."
+        script.sh "docker build -t tomkley/demo-app:$imageName ."
     }
 
     def dockerLogin() {
